@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Aster mark: a star inside a speech bubble.
+  Star = "Aster"; bubble = conversation. Original geometry, no third-party logo.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- speech bubble -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="4"
+        android:pathData="M30,34 a10,10 0 0 1 10,-10 h38 a10,10 0 0 1 10,10 v24 a10,10 0 0 1 -10,10 H52 l-12,12 v-12 H40 a10,10 0 0 1 -10,-10 z" />
+
+    <!-- star (filled) -->
+    <path
+        android:fillColor="#FF6B3D"
+        android:pathData="M54,40 l3.2,8.6 8.8,1.4 -6.4,6.4 1.2,8.8 L54,61 l-8.8,4.2 1.2,-8.8 -6.4,-6.4 8.8,-1.4 z" />
+</vector>

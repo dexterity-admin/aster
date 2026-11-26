@@ -1,0 +1,39 @@
+# Build an installable APK on GitHub-hosted runners. Free for public repos (Actions minutes free).
+# No paid CI, no paid signing service, no Play Store upload, no secrets required for debug APK.
+name: Build APK
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.11.1'
+
+      - name: Build debug APK (sideloadable, debug-signed)
+        run: gradle :app:assembleDebug --stacktrace
+
+      - name: Upload APK artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: aster-apk
+          path: app/build/outputs/apk/debug/*.apk
+          if-no-files-found: error

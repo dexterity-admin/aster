@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Aster brand palette. Original; not Signal blue, not WhatsApp green. See docs/BRAND.md. -->
+    <color name="aster_violet">#5B3FD9</color>      <!-- primary -->
+    <color name="aster_violet_dark">#4330A8</color>
+    <color name="aster_violet_light">#8A77F0</color>
+    <color name="aster_nova">#FF6B3D</color>        <!-- accent / ember -->
+    <color name="aster_sage">#2FAE8F</color>        <!-- secondary -->
+    <color name="aster_ink">#0B0D12</color>         <!-- dark background -->
+    <color name="aster_surface">#161A22</color>     <!-- dark surface -->
+    <color name="aster_cloud">#F6F4EF</color>       <!-- light background / on-dark text -->
+    <color name="aster_paper">#FFFFFF</color>
+    <color name="aster_muted">#9AA3B2</color>
+    <color name="aster_icon_background">#5B3FD9</color>
+</resources>
